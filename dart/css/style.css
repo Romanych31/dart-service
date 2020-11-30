@@ -1295,14 +1295,8 @@ body.ie .ibg img {
     padding: 6% 10px;
   }
   .count__body {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate3d(0, -50%, 0);
-    -webkit-transform: translate3d(0, -50%, 0);
-    -ms-transform: translate3d(0, -50%, 0);
-    -o-transform: translate3d(0, -50%, 0);
-    -moz-transform: translate3d(0, -50%, 0);
+    width: 160px;
+    margin: 0 auto;
     justify-content: start;
   }
   .count__icon {
@@ -1959,6 +1953,12 @@ body.ie .ibg img {
   box-shadow: 0 0 10px rgba(29, 233, 182, 0.85);
   transition: all 0.2s ease 0s;
 }
+.input input::placeholder,
+.input textarea::placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  color: #061e37;
+}
 .input input._error,
 .input textarea._error {
   background-color: rgba(255, 164, 164, 0.5);
@@ -1981,14 +1981,6 @@ body.ie .ibg img {
 .input textarea {
   height: 150px;
   resize: vertical;
-}
-.input .placeholder {
-  position: absolute;
-  top: 20px;
-  left: 40px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #061e37;
 }
 
 .checkbox input {
