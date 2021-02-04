@@ -1,23 +1,21 @@
-$(document).ready(function () {
-   $('.slider').slick({
-      vertical: true,
-      verticalSwiping: true,
-      adaptiveHeight: true,
-      adaptiveWidth: true,
-      infinite: false,
-      slidesToShow: 2,
-      autoplay: 0,
-      autoplaySpeed: 10000,
-      draggable: false,
-      waiteForAnimate: false,
-   });
+$('.slider').slick({
+   vertical: true,
+   verticalSwiping: true,
+   adaptiveHeight: true,
+   adaptiveWidth: true,
+   infinite: false,
+   slidesToShow: 2,
+   autoplay: 0,
+   autoplaySpeed: 10000,
+   draggable: false,
+   waiteForAnimate: false,
+});
 
-   $('.slider__text').each(function () {
-      $(this).css('height');
-      if (parseFloat($(this).css('height')) > 100) {
-         $(this).parent().wrap("<div class='slider__wrapper'></div>");
-      }
-   });
+$('.slider__text').each(function () {
+   $(this).css('height');
+   if (parseFloat($(this).css('height')) > 100) {
+      $(this).parent().wrap("<div class='slider__wrapper'></div>");
+   }
 });
 
 let l = $('.slider-img .slider-img__item');
@@ -26,33 +24,32 @@ if (l.length < 4) {
    $('.slider-content__item:last-child').clone().prependTo('.slider-content');
 }
 
-$(document).ready(function () {
-   $('.slider-img').slick({
-      asNavFor: '.slider-content',
-      infinite: false,
-      slidesToShow: 3,
-      initialSlide: 2,
-      waiteForAnimate: false,
-      variableWidth: true,
-      centerMode: true,
-      cssEase: 'ease-in',
-      speed: 500,
-      easing: 'liner',
-      touchMove: false,
-      swipeToSlide: false,
-      touchThreshold: 7,
-   });
-
-   $('.slider-content').slick({
-      asNavFor: '.slider-img',
-      infinite: false,
-      slidesToShow: 1,
-      initialSlide: 2,
-      speed: 500,
-      cssEase: 'ease-in',
-      waiteForAnimate: false,
-      draggable: false,
-      swipe: false,
-   });
+$('.slider-img').slick({
+   asNavFor: '.slider-content',
+   infinite: false,
+   slidesToShow: 3,
+   initialSlide: 2,
+   waiteForAnimate: false,
+   variableWidth: true,
+   centerMode: true,
+   cssEase: 'ease-in',
+   speed: 500,
+   easing: 'liner',
+   touchMove: false,
+   swipeToSlide: false,
+   touchThreshold: 7,
 });
+
+$('.slider-content').slick({
+   asNavFor: '.slider-img',
+   infinite: false,
+   slidesToShow: 1,
+   initialSlide: 2,
+   speed: 500,
+   cssEase: 'ease-in',
+   waiteForAnimate: false,
+   draggable: false,
+   swipe: false,
+});
+
 

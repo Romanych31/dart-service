@@ -582,10 +582,8 @@ body {
          padding: 6% 10px;
       }
       &__body {
-         position: absolute;
-         top: 50%;
-         left: 30%;
-         @include tr(0, -50%, 0);
+         width: 160px;
+         margin: 0 auto;
          justify-content: start;
       }
       &__icon {
@@ -1205,6 +1203,11 @@ body {
          box-shadow: 0 0 10px $form-active-clr;
          @include anim(0.2s, 0s);
       }
+      &::placeholder {
+         font-size: $form-txt-sz + px;
+         font-weight: 500;
+         color: $main-1-clr;
+      }
       &._error {
          background-color: rgba(255, 164, 164, 0.5);
       }
@@ -1226,14 +1229,6 @@ body {
    textarea {
       height: 150px;
       resize: vertical;
-   }
-   .placeholder {
-      position: absolute;
-      top: 20px;
-      left: 40px;
-      font-size: $form-txt-sz + px;
-      font-weight: 500;
-      color: $main-1-clr;
    }
 }
 
